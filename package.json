@@ -1,0 +1,26 @@
+{
+  "name": "painorbook-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SVladikO/painorbook-api.git"
+  },
+  "author": "svladiko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SVladikO/painorbook-api/issues"
+  },
+  "homepage": "https://github.com/SVladikO/painorbook-api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  }
+}
