@@ -9,6 +9,7 @@ const GuitarsController = require('./controller/Guitars.controller')
 const VouchersController = require('./controller/Vouchers.controller')
 const CountriesController = require('./controller/Countries.controller')
 const ArticleController = require('./controller/Article.controller')
+const WishesController = require('./controller/Wishes.controller')
 
 app.use(cors({
     origin: ['http://localhost:3000'],
@@ -27,6 +28,7 @@ GuitarsController(app);
 VouchersController(app);
 CountriesController(app);
 ArticleController(app);
+WishesController(app);
 
 app.listen(port, () => {
     console.log('App is run on: http://localhost:' + port)
