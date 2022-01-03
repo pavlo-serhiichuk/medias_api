@@ -1,4 +1,3 @@
-
 function filterProducts(category, body, res) {
   let { filterName, filterParam } = body;
 
