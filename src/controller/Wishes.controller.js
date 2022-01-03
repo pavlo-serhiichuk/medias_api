@@ -1,6 +1,10 @@
 const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
 
+let books = require("../db/books.js");
+let guitars = require("../db/guitars.js");
+let vouchers = require("../db/vouchers.js");
+
 let wishes = require("../db/wishes.json");
 const {writeData} = require("../utils/index.js")
 
@@ -8,10 +12,22 @@ function init(app) {
   app.put("/wishes", jsonParser, (req, res) => {
     let {userId} = req.body
 
-    let currentUserWishes = wishes.filter(wish => wish.userId === userId)
+    let wishesMaping = wishes.filter(wish => wish.userId === userId)
     
+    let wishesProducts = []
+
+    wishesMaping.map(w => {
+      if (w.category === 'books') {
+       return books.map(book => book.id === w.productId && wishesProducts.push(book))
+      } else if (w.category === 'guitars') {
+        return guitars.map(guitar => guitar.id === w.productId && wishesProducts.push(guitar))
+      } else if (w.category === 'vouchers') {
+        return vouchers.map(voucher => voucher.id === w.productId && wishesProducts.push(voucher))
+      }
+    }) 
+
     res.status(200);
-    res.send(currentUserWishes);
+    res.send(wishesProducts);
 
   });
 
