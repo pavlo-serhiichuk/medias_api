@@ -1,7 +1,7 @@
 const bodyParser = require('body-parser')
 const jsonParser = bodyParser.json()
 
-const users = require('../db/users.js')
+const users = require('../db/users.json')
 
 module.exports = function init(app) {
     
