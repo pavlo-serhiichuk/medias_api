@@ -1,7 +1,7 @@
 const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
 
-const vouchers = require("../db/vouchers.js");
+const vouchers = require("../db/vouchers.json");
 const filterProducts = require("../utils/filters.js");
 
 function init(app) {

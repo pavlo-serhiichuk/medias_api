@@ -13,8 +13,6 @@ function filterProducts(category, body, res) {
         .reverse();
     }
 
-    console.log(filteredProducts);
-
     res.status(200);
     res.send(filteredProducts);
   }

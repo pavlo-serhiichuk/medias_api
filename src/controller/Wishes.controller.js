@@ -1,12 +1,11 @@
 const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
 
-let books = require("../db/books.js");
-let guitars = require("../db/guitars.js");
-let vouchers = require("../db/vouchers.js");
+let books = require("../db/books.json");
+let guitars = require("../db/guitars.json");
+let vouchers = require("../db/vouchers.json");
 
 let wishes = require("../db/wishes.json");
-const {writeData} = require("../utils/index.js")
 
 function init(app) {
   app.put("/wishes", jsonParser, (req, res) => {
@@ -52,8 +51,6 @@ function init(app) {
     writeData('../src/db/wishes.json', wishesToWrite)
 
     let currentUserWishes = wishes.filter(wish => wish.userId === userId)
-
-console.log(currentUserWishes);
 
     res.status(200);
     res.send(currentUserWishes);
