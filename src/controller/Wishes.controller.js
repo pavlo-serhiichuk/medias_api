@@ -6,6 +6,7 @@ let guitars = require("../db/guitars.json");
 let vouchers = require("../db/vouchers.json");
 
 let wishes = require("../db/wishes.json");
+let writeData = require("../utils/index.js");
 
 function init(app) {
   app.put("/wishes", jsonParser, (req, res) => {

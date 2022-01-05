@@ -11,7 +11,6 @@ function writeData(path, content) {
     })
 }
 
-module.exports = {
-    writeData
-}
+module.exports = writeData
+
 
