@@ -12,7 +12,7 @@ function init(app) {
     res.send(vouchers);
   });
 
-  app.get("vouchers/countries", function (req, res) {
+  app.get("/country", (req, res) => {
     const id = +req.query.id;
     const filteredVouchers = vouchers.filter((v) => v.countryId === id);
     console.log("filteredId", id);
