@@ -7,6 +7,7 @@ function init(app) {
     app.get('/articles', (req, res) => {
         console.log('requested');
         let articlesIntro = articles.map(article => ({...article, description: article.description.split(' ').slice(0, 50).join(' ')}))
+        console.log('in process');
         res.send(articlesIntro);
     });
 
