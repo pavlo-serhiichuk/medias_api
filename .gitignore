@@ -25,3 +25,12 @@ xxx/.idea/misc.xml
 xxx/.idea/modules.xml
 xxx/.idea/vcs.xml
 xxx/.idea/xxx.iml
+/.idea/.gitignore
+/src/db/.idea/.gitignore
+/src/db/.idea/db.iml
+/.idea/medias_api.iml
+/src/db/.idea/misc.xml
+/.idea/modules.xml
+/src/db/.idea/modules.xml
+/.idea/vcs.xml
+/src/db/.idea/vcs.xml
